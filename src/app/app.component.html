@@ -1,5 +1,10 @@
-<div class="wrapper">
-  <router-outlet></router-outlet>
-</div>
+<!--<div class="wrapper">-->
+<!--  <router-outlet></router-outlet>-->
+<!--</div>-->
 
-<app-password-field></app-password-field>
+<!--<app-password-field></app-password-field>-->
+<form [formGroup]="form">
+  <app-password-input formControlName="password"></app-password-input>
+  <app-password-strength-indicator [password]="form.get('password')?.value"></app-password-strength-indicator>
+</form>
+
